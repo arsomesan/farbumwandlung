@@ -32,7 +32,7 @@ public:
 	//konvertieren
 	void getRGB();
 	void getCMY();
-	//void getRGB
+	void getHSV();
 
 	
 private:

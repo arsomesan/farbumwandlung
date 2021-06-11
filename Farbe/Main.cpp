@@ -9,9 +9,9 @@ int main() {
 
 
 	Farbe rot = Farbe(187, 123, 5);
-	rot.printAll();
-	rot.getCMY();
-	rot.printAll();
-	//cmy.printAll();
-	//yiq.printAll();
+	Farbe test = Farbe();
+	test.setYIQ(0.427f, -0.216f, 0.023f);
+	
+	test.getCMY();
+	test.printAll();
 }

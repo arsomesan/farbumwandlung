@@ -149,9 +149,9 @@ void Farbe::getRGB() {
 void Farbe::getCMY() {
 	switch (type) {
 	case 1:
-		color_float[0] = 1 - color[0] / 255;
-		color_float[1] = 1 - color[1] / 255;
-		color_float[2] = 1 - color[2] / 255;
+		color_float[0] = 1 - (float)color[0] / 255;
+		color_float[1] = 1 - (float)color[1] / 255;
+		color_float[2] = 1 - (float)color[2] / 255;
 		type = 2;
 		break;
 
@@ -159,7 +159,22 @@ void Farbe::getCMY() {
 		std::cout << "Already in CMY\n";
 		break;
 
+	case 3:
+		std::cout << "Not gonna Implement";
+		break;
 
+	case 4:
+		getRGB();
+		getCMY();
+		break;
+	}
+}
+
+void Farbe::getHSV() {
+	switch (type) {
+	case 1:
+
+		break;
 	}
 }
 

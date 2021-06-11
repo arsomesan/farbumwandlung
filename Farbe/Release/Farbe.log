@@ -5,12 +5,10 @@ f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\far
 f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(136): warning C4244: "=": Konvertierung von "double" in "float", möglicher Datenverlust
 f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(137): warning C4244: "=": Konvertierung von "double" in "float", möglicher Datenverlust
 f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(138): warning C4244: "=": Konvertierung von "double" in "float", möglicher Datenverlust
-f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(153): warning C4244: "=": Konvertierung von "int" in "float", möglicher Datenverlust
-f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(154): warning C4244: "=": Konvertierung von "int" in "float", möglicher Datenverlust
-f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(155): warning C4244: "=": Konvertierung von "int" in "float", möglicher Datenverlust
+  Main.cpp
   Code wird generiert.
-  2 of 14 functions (14.3%) were compiled, the rest were copied from previous compilation.
+  4 of 16 functions (25.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+    3 functions had inline decision re-evaluated but remain unchanged
   Codegenerierung ist abgeschlossen.
   Farbe.vcxproj -> F:\S\Most\semester_4\AI1019_grafische_datenverarbeitung\07_woche\farbe\Farbe\Release\Farbe.exe
