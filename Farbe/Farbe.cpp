@@ -226,6 +226,16 @@ void Farbe::getHSV() {
 
 
 		break;
+	case 2:
+		std::cout << "Not gonna Implement";
+		break;
+
+	case 3:
+		std::cout << "Already HSV";
+		break;
+	case 4:
+		std::cout << "Not gonna Implement";
+		break;
 	}
 }
 
