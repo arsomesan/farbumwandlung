@@ -1,0 +1,8 @@
+﻿  Farbe.cpp
+c:\4_semester\graphische_datenverarbeitung\cpp\5_farbe\share\farbumwandlung\farbe\farbe.cpp(125): warning C4244: "=": Konvertierung von "float" in "unsigned char", möglicher Datenverlust
+c:\4_semester\graphische_datenverarbeitung\cpp\5_farbe\share\farbumwandlung\farbe\farbe.cpp(126): warning C4244: "=": Konvertierung von "float" in "unsigned char", möglicher Datenverlust
+c:\4_semester\graphische_datenverarbeitung\cpp\5_farbe\share\farbumwandlung\farbe\farbe.cpp(127): warning C4244: "=": Konvertierung von "float" in "unsigned char", möglicher Datenverlust
+c:\4_semester\graphische_datenverarbeitung\cpp\5_farbe\share\farbumwandlung\farbe\farbe.cpp(142): warning C4244: "=": Konvertierung von "double" in "float", möglicher Datenverlust
+c:\4_semester\graphische_datenverarbeitung\cpp\5_farbe\share\farbumwandlung\farbe\farbe.cpp(143): warning C4244: "=": Konvertierung von "double" in "float", möglicher Datenverlust
+c:\4_semester\graphische_datenverarbeitung\cpp\5_farbe\share\farbumwandlung\farbe\farbe.cpp(144): warning C4244: "=": Konvertierung von "double" in "float", möglicher Datenverlust
+  Farbe.vcxproj -> C:\4_Semester\Graphische_Datenverarbeitung\CPP\5_Farbe\share\farbumwandlung\x64\Debug\Farbe.exe

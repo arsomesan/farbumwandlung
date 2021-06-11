@@ -12,6 +12,9 @@ int main() {
 	Farbe test = Farbe();
 	test.setYIQ(0.427f, -0.216f, 0.023f);
 	
-	test.getCMY();
-	test.printAll();
+	//test.getCMY();
+	//test.printAll();
+
+	rot.getHSV();
+	rot.printAll();
 }

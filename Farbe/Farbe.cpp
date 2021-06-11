@@ -47,6 +47,12 @@ void Farbe::printAll() {
 			}
 			break;
 
+		case 3:
+			for (int i = 0; i < 3; i++) {
+				std::cout << color_float[i] << "\n";
+			}
+			break;
+
 	}
 }
 
@@ -173,6 +179,51 @@ void Farbe::getCMY() {
 void Farbe::getHSV() {
 	switch (type) {
 	case 1:
+
+		float Cmax = 0;
+		float Cmin = 1;
+		float S = 0;
+		float H;
+		
+
+		for (int i = 0; i < 3; i++) {
+			if ((float)color[i] / 255 > Cmax) {
+				Cmax = (float)color[i] / 255;
+			}
+			if ((float)color[i] / 255 < Cmin) {
+				Cmin = (float)color[i] / 255;
+			}
+		}
+
+		float d = Cmax - Cmin;
+
+		if (Cmax > 0) {
+			S = (Cmax - Cmin) / Cmax;
+		}
+		/*else if (Cmax == 0) {
+			S = 0;
+		}*/
+
+		if (S > 0 && d > 0) {
+			if ((float)color[0] / 255 == Cmax) {
+				H = 0 + ((float)color[1] / 255 - (float)color[2] / 255) / d;
+			}
+			if ((float)color[1] / 255 == Cmax) {
+				H = 2 + ((float)color[2] / 255 - (float)color[0] / 255) / d;
+			}
+			if ((float)color[2] / 255 == Cmax) {
+				H = 4 + ((float)color[0] / 255 - (float)color[1] / 255) / d;
+			}
+		}
+		
+		H *= 60;
+		if (H < 0) H += 360;
+
+		color_float[0] = H;
+		color_float[1] = S;
+		color_float[2] = Cmax;
+		type = 3;
+
 
 		break;
 	}
