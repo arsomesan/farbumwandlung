@@ -4,6 +4,7 @@
 class Farbe {
 
 	unsigned char color[3];
+	float color_float[3];
 	int type;
 	//rgb = 1;
 	//cmy = 2;
@@ -18,6 +19,7 @@ public:
 	float getRed();
 	float getGreen();
 	float getBlue();
+	void printAll();
 	//setColorFunctions
 	void setRGB(unsigned char r, unsigned char g, unsigned char b);
 	void setRGB(float r, float g, float b);
@@ -28,6 +30,8 @@ public:
 	void setYIQ(unsigned char y, unsigned char i, unsigned char q);
 	void setYIQ(float y, float i, float q);
 	//konvertieren
+	void getRGB();
+	void getCMY();
 	//void getRGB
 
 	
