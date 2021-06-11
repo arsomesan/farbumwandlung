@@ -10,11 +10,11 @@ int main() {
 
 	Farbe rot = Farbe(187, 123, 5);
 	Farbe test = Farbe();
+	Farbe test2 = Farbe(60, 120, 180);
 	test.setYIQ(0.427f, -0.216f, 0.023f);
 	
-	//test.getCMY();
-	//test.printAll();
-
-	rot.getHSV();
-	rot.printAll();
+	test.getCMY();
+	test.getYIQ();
+	test.printAll();
+	
 }

@@ -1,5 +1,6 @@
 #ifndef _FARBE_H_
 #define _FARBE_H_
+#include "Matrix.h"
 
 class Farbe {
 
@@ -33,6 +34,8 @@ public:
 	void getRGB();
 	void getCMY();
 	void getHSV();
+	void getYIQ();
+	void getGreyscale();
 
 	
 private:

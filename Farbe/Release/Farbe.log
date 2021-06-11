@@ -1,13 +1,15 @@
 ﻿  Farbe.cpp
-f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(119): warning C4244: "=": Konvertierung von "float" in "unsigned char", möglicher Datenverlust
-f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(120): warning C4244: "=": Konvertierung von "float" in "unsigned char", möglicher Datenverlust
-f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(121): warning C4244: "=": Konvertierung von "float" in "unsigned char", möglicher Datenverlust
-f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(136): warning C4244: "=": Konvertierung von "double" in "float", möglicher Datenverlust
-f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(137): warning C4244: "=": Konvertierung von "double" in "float", möglicher Datenverlust
-f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(138): warning C4244: "=": Konvertierung von "double" in "float", möglicher Datenverlust
-  Main.cpp
+f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(130): warning C4244: "=": Konvertierung von "float" in "unsigned char", möglicher Datenverlust
+f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(131): warning C4244: "=": Konvertierung von "float" in "unsigned char", möglicher Datenverlust
+f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(132): warning C4244: "=": Konvertierung von "float" in "unsigned char", möglicher Datenverlust
+f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(147): warning C4244: "=": Konvertierung von "double" in "float", möglicher Datenverlust
+f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(148): warning C4244: "=": Konvertierung von "double" in "float", möglicher Datenverlust
+f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(149): warning C4244: "=": Konvertierung von "double" in "float", möglicher Datenverlust
+f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(265): warning C4244: "=": Konvertierung von "double" in "float", möglicher Datenverlust
+f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(266): warning C4244: "=": Konvertierung von "double" in "float", möglicher Datenverlust
+f:\s\most\semester_4\ai1019_grafische_datenverarbeitung\07_woche\farbe\farbe\farbe\farbe.cpp(267): warning C4244: "=": Konvertierung von "double" in "float", möglicher Datenverlust
   Code wird generiert.
-  4 of 16 functions (25.0%) were compiled, the rest were copied from previous compilation.
+  4 of 17 functions (23.5%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     3 functions had inline decision re-evaluated but remain unchanged
   Codegenerierung ist abgeschlossen.

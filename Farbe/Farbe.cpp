@@ -52,6 +52,11 @@ void Farbe::printAll() {
 				std::cout << color_float[i] << "\n";
 			}
 			break;
+		case 4:
+			for (int i = 0; i < 3; i++) {
+				std::cout << color_float[i] << "\n";
+			}
+			break;
 
 	}
 }
@@ -179,12 +184,12 @@ void Farbe::getCMY() {
 void Farbe::getHSV() {
 	switch (type) {
 	case 1:
-
+	{
 		float Cmax = 0;
 		float Cmin = 1;
 		float S = 0;
 		float H;
-		
+
 
 		for (int i = 0; i < 3; i++) {
 			if ((float)color[i] / 255 > Cmax) {
@@ -215,7 +220,7 @@ void Farbe::getHSV() {
 				H = 4 + ((float)color[0] / 255 - (float)color[1] / 255) / d;
 			}
 		}
-		
+
 		H *= 60;
 		if (H < 0) H += 360;
 
@@ -224,7 +229,7 @@ void Farbe::getHSV() {
 		color_float[2] = Cmax;
 		type = 3;
 
-
+	}
 		break;
 	case 2:
 		std::cout << "Not gonna Implement";
@@ -236,6 +241,48 @@ void Farbe::getHSV() {
 	case 4:
 		std::cout << "Not gonna Implement";
 		break;
+		
 	}
+}
+
+void Farbe::getYIQ() {
+	switch (type) {
+	case 1:
+	{
+		/*double fill2[] = { 0.299, 0.596, 0.212, 0.587, -0.275, -0.523, 0.114, -0.321, 0.311 };
+		Matrix yiq_matrix = Matrix(fill2);
+		Vektormath rgb_vektor = Vektormath(color[0], color[1], color[2]);
+		Vektormath ergeb = yiq_matrix.multiplicate(rgb_vektor);
+		color_float[0] = (float)ergeb.get_x() / 255;
+		color_float[1] = (float)ergeb.get_y() / 255;
+		color_float[2] = (float)ergeb.get_z() / 255;
+		*/
+
+		float r = color[0];
+		float g = color[1];
+		float b = color[2];
+
+		color_float[0] = ((0.299 * r) + (0.587 * g) + (0.144 * b)) / 255;
+		color_float[1] = ((0.596 * r) + (-0.275 * g) + (-0.321 * b)) / 255;
+		color_float[2] = ((0.212 * r) + (-0.523 * g) + (0.311 * b)) / 255;
+		type = 4;
+	}
+		break;
+
+	case 2:
+		getRGB();
+		getYIQ();
+		break;
+
+	case 3:
+		std::cout << "Not gonna implement";
+		break;
+	case 4:
+		std::cout << "Already YIQ";
+	}
+
+
+
+	
 }
 
