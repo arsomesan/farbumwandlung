@@ -29,6 +29,33 @@ float Farbe::getBlue() {
 	return color[2];
 }
 
+void Farbe::printAll() {
+
+	switch (type) {
+		case 1:
+
+			for (int i = 0; i < 3; i++) {
+				std::cout << (int)color[i] << "\n";
+			}
+
+			break;
+	
+
+		case 2:
+			for (int i = 0; i < 3; i++) {
+				std::cout << color_float[i] << "\n";
+			}
+			break;
+
+		case 3:
+			for (int i = 0; i < 3; i++) {
+				std::cout << color_float[i] << "\n";
+			}
+			break;
+
+	}
+}
+
 
 void Farbe::setRGB(unsigned char r, unsigned char g, unsigned char b) {
 
@@ -46,16 +73,16 @@ void Farbe::setRGB(float r, float g, float b) {
 }
 
 void Farbe::setCMY(unsigned char c, unsigned char m, unsigned char y) {
-	color[0] = c;
-	color[1] = m;
-	color[2] = y;
+	color_float[0] = (float)c/255;
+	color_float[1] = (float)m/255;
+	color_float[2] = (float)y/255;
 	type = 2;
 }
 
 void Farbe::setCMY(float c, float m, float y) {
-	color[0] = (unsigned char)c*255;
-	color[1] = (unsigned char)m*255;
-	color[2] = (unsigned char)y*255;
+	color_float[0] = c;
+	color_float[1] = m;
+	color_float[2] = y;
 	type = 2;
 }
 
@@ -74,15 +101,131 @@ void Farbe::setHSV(float h, float s, float v) {
 }
 
 void Farbe::setYIQ(unsigned char y, unsigned char i, unsigned char q) {
-	color[0] = y;
-	color[1] = i;
-	color[2] = q;
+	color_float[0] = (float)y/255;
+	color_float[1] = (float)i/255;
+	color_float[2] = (float)q/255;
 	type = 4;
 }
 void Farbe::setYIQ(float y, float i, float q) {
-	color[0] = (unsigned char)y;
-	color[1] = (unsigned char)i;
-	color[2] = (unsigned char)q;
+	color_float[0] = y;
+	color_float[1] = i;
+	color_float[2] = q;
 	type = 4;
+}
+
+//Konvertieren
+
+void Farbe::getRGB() {
+	switch (type) {
+	case 1:
+		std::cout << "Already in RGB\n";
+		break;
+	case 2:
+		//convert cmy to rgb
+		color[0] = 255 - color_float[0]*255;
+		color[1] = 255 - color_float[1]*255;
+		color[2] = 255 - color_float[2]*255;
+		type = 1;
+		break;
+	case 3:
+		std::cout << "Not gonna implement\n";
+		break;
+	case 4:
+		//convert yiq to rgb
+		float y = color_float[0];
+		float i = color_float[1];
+		float q = color_float[2];
+		float ergeb[3];
+		for (int i = 0; i < 3; i++) {
+			ergeb[i] = color_float[i];
+		}
+		ergeb[0] = (y + (0.956 * i) + (0.621 * q)) * 255;
+		ergeb[1] = (y + (-0.272 * i) + (-0.647 * q)) * 255;
+		ergeb[2] = (y + (-1.105 * i) + (1.702 * q)) * 255;
+		for(int i = 0; i < 3; i++) {
+			if (color[i] < 0) color[i] = 0;
+			if (color[i] > 255) color[i] = 255;
+			color[i] = (unsigned char)ergeb[i];
+		}
+		type = 1;
+		break;
+	}
+}
+
+void Farbe::getCMY() {
+	switch (type) {
+	case 1:
+		color_float[0] = 1 - (float)color[0] / 255;
+		color_float[1] = 1 - (float)color[1] / 255;
+		color_float[2] = 1 - (float)color[2] / 255;
+		type = 2;
+		break;
+
+	case 2: 
+		std::cout << "Already in CMY\n";
+		break;
+
+	case 3:
+		std::cout << "Not gonna Implement";
+		break;
+
+	case 4:
+		getRGB();
+		getCMY();
+		break;
+	}
+}
+
+void Farbe::getHSV() {
+	switch (type) {
+	case 1:
+
+		float Cmax = 0;
+		float Cmin = 1;
+		float S = 0;
+		float H;
+		
+
+		for (int i = 0; i < 3; i++) {
+			if ((float)color[i] / 255 > Cmax) {
+				Cmax = (float)color[i] / 255;
+			}
+			if ((float)color[i] / 255 < Cmin) {
+				Cmin = (float)color[i] / 255;
+			}
+		}
+
+		float d = Cmax - Cmin;
+
+		if (Cmax > 0) {
+			S = (Cmax - Cmin) / Cmax;
+		}
+		/*else if (Cmax == 0) {
+			S = 0;
+		}*/
+
+		if (S > 0 && d > 0) {
+			if ((float)color[0] / 255 == Cmax) {
+				H = 0 + ((float)color[1] / 255 - (float)color[2] / 255) / d;
+			}
+			if ((float)color[1] / 255 == Cmax) {
+				H = 2 + ((float)color[2] / 255 - (float)color[0] / 255) / d;
+			}
+			if ((float)color[2] / 255 == Cmax) {
+				H = 4 + ((float)color[0] / 255 - (float)color[1] / 255) / d;
+			}
+		}
+		
+		H *= 60;
+		if (H < 0) H += 360;
+
+		color_float[0] = H;
+		color_float[1] = S;
+		color_float[2] = Cmax;
+		type = 3;
+
+
+		break;
+	}
 }
 

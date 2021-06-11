@@ -2,14 +2,19 @@
 #include "Farbe.h"
 
 int main() {
-	Farbe rot = Farbe(255, 0, 0);
+
 	Farbe gruen = Farbe(0, 255, 0);
 	Farbe blau = Farbe(0, 0, 255);
 	Farbe schwarz = Farbe();
-	
-	Farbe kek = Farbe();
 
-	kek.setRGB(0.0f, 1.0f, 0.0f);
+
+	Farbe rot = Farbe(187, 123, 5);
+	Farbe test = Farbe();
+	test.setYIQ(0.427f, -0.216f, 0.023f);
 	
-	std::cout << kek.getGreen();
+	//test.getCMY();
+	//test.printAll();
+
+	rot.getHSV();
+	rot.printAll();
 }
