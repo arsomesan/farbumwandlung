@@ -17,6 +17,18 @@ Farbe::Farbe(int r, int g, int b) {
 	type = 1;
 }
 
+float Farbe::getRed() {
+	return color[0];
+}
+
+float Farbe::getGreen() {
+	return color[1];
+}
+
+float Farbe::getBlue() {
+	return color[2];
+}
+
 
 void Farbe::setRGB(unsigned char r, unsigned char g, unsigned char b) {
 
@@ -47,13 +59,13 @@ void Farbe::setCMY(float c, float m, float y) {
 	type = 2;
 }
 
-void Farbe::setHMV(unsigned char h, unsigned char m, unsigned char v) {
+void Farbe::setHSV(unsigned char h, unsigned char s, unsigned char v) {
 	color[0] = (float)h;
-	color[1] = (float)m;
+	color[1] = (float)s;
 	color[2] = (float)v;
 	type = 3;
 }
-void Farbe::setHMV(float h, float s, float v) {
+void Farbe::setHSV(float h, float s, float v) {
 	color[0] = h;
 	color[1] = s;
 	color[2] = v;
