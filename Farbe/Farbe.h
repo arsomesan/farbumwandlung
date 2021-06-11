@@ -3,7 +3,7 @@
 
 class Farbe {
 
-	float color[3];
+	unsigned char color[3];
 	int type;
 	//rgb = 1;
 	//cmy = 2;
@@ -28,7 +28,7 @@ public:
 	void setYIQ(unsigned char y, unsigned char i, unsigned char q);
 	void setYIQ(float y, float i, float q);
 	//konvertieren
-	void getRGB
+	//void getRGB
 
 	
 private:
